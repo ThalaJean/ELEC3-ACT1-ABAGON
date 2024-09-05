@@ -8,8 +8,8 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --black-color: hsl(239, 57%, 18%); /* Dark black color */
-  --black-color-light:  hsl(239, 69%, 25%); /* Lighter shade of green */
+  --black-color: hsla(239, 57%, 18%, 0); /* Dark black color */
+  --black-color-light:  hsla(239, 69%, 25%, 0.467); /* Lighter shade of green */
   --black-color-lighten:  hsl(242, 17%, 45%); /* Lightest shade of green
    */
   --white-color: #f2efef; /* White color */
@@ -21,7 +21,7 @@
   --normal-font-size: .938rem; /* Default font size */
 
   /*========== Font weight ==========*/
-  --font-regular: 400; /* Normal font weight */
+  --font-regular: 500; /* Normal font weight */
   --font-semi-bold: 600; /* Semi-bold font weight */
 
   /*========== z index ==========*/
@@ -40,7 +40,7 @@
 * {
   box-sizing: border-box; /* Ensures consistent box-sizing */
   padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
+  margin: 0; /* Rem oves default margin */
 }
 
 body {
@@ -59,12 +59,12 @@ ul {
 }
 
 a {
-  text-decoration: none; /* Removes underline from links */
+  text-decoration: none; /* Removes underline #040435;#040435;#040435;#040435;#040435;#040435;from links */
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px; /* Maximum width of the container */
+  max-width: 1200px; /* Maximum width of the container */
   margin-inline: 1.5rem; /* Horizontal margins */
 }
 
@@ -74,8 +74,8 @@ a {
   top: 0;
   left: 0;
   width: 100%; /* Full width header */
-  background-color: var(--black-color); /* Header background color */
-  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3); /* Adds shadow to the header */
+  background-color: hsla(245, 89%, 15%, 0.569); /* Header background color */
+  box-shadow: 0 2px 16px hsla(222, 32%, 8%, 0.508); /* Adds shadow to the header */
   z-index: var(--z-fixed); /* Sets z-index for the header */
 }
 
@@ -102,8 +102,7 @@ a {
   align-items: center; /* Centers items vertically */
   column-gap: .50rem; /* Space between logo icon and text */
   font-weight: var(--font-semi-bold); /* Semi-bold font weight for logo text */
-  /* Color highlighting when pressed on mobile devices */
-  /*-webkit-tap-highlight-color: transparent;*/ /* Uncomment if needed to remove highlight */
+  
 }
 
 .nav__logo i {
@@ -337,4 +336,17 @@ a {
     pointer-events: initial; /* Allows interaction */
     transition: top .3s; /* Smooth transition for top positioning */
   }
+  .nav__link:hover {
+    color: #1387da; /* Change text color */
+    padding: 10px 15px;           /* Add padding (top-bottom: 10px, left-right: 15px) */
+    border-radius: 10px;           /* Optional: Add rounded corners */
+    transition: background-color 0.3s ease, padding 0.5s ease; /* Smooth transition */
+  }
+ .dropdown__link:hover {
+    background-color: rgba(246, 246, 252, 0.067); /* Change background color */
+    color: #f3f3f3; /* Change text color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+
 }
